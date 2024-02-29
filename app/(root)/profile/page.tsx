@@ -16,7 +16,7 @@ const ProfilePage = async () => {
   const organizedEvents = await getEventsByUser({
     userId,
     page: 1,
-  });
+  }); 
 
   return (
     <>
