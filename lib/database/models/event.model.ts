@@ -9,7 +9,7 @@ export interface IEvent extends Document {
     imageUrl: string;
     startDateTime: Date;
     endDateTime: Date;
-    price?: string;
+    price: string;
     isFree: boolean;
     url?: string;
     category: { _id: string, name: string };
@@ -31,6 +31,6 @@ const EventSchema = new Schema({
   organizer: { type: Schema.Types.ObjectId, ref: "User" },
 });
 
-const Events = models.Event || model("Event", EventSchema);
+const Event = models.Event || model("Event", EventSchema);
 
-export default Events;
+export default Event;
